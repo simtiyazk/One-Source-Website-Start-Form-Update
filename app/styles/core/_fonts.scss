@@ -1,0 +1,39 @@
+//
+// Typography
+// --------------------------------------------------
+
+//Helvetica-67-Md-Cn
+@include font-face($f-helvetica-67-md-cn, 'Helvetica-Neue-LT-W05_67-Md-Cn', normal);
+
+// Helvetica-47-Lt-Cn
+@include font-face($f-helvetica-47-lt-cn, 'Helvetica-Neue-LT-W05_47-Lt-Cn', normal);
+
+// Helvetica-47-Lt-Cn-Ob
+@include font-face($f-helvetica-47-lt-cn-ob, 'Helvetica-Neue-LT-W05_47-Lt-Cn-Ob', normal);
+
+
+//
+// Font Mixins
+// --------------------------------------------------
+
+//OpenSans-Extra-Bold
+@mixin helvetica-67-md-cn {
+  font-family: $f-helvetica-67-md-cn;
+  font-style: normal;
+  font-weight: normal;
+}
+
+//OpenSans-regular
+@mixin sans-regular {
+  font-family: $f-helvetica-47-lt-cn;
+  font-style: normal;
+  font-weight: normal;
+}
+
+//OpenSans-regular
+@mixin sans-italic {
+  font-family: $f-helvetica-47-lt-cn-ob;
+  font-style: normal;
+  font-weight: normal;
+}
+

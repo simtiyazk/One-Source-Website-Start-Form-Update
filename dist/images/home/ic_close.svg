@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>ic_close</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ic_close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(13.000000, 13.000000) rotate(45.000000) translate(-13.000000, -13.000000) translate(4.000000, 4.000000)" fill="#DBD8D8" id="ic_isi_open/close">
+            <path d="M10.5,7.5 L18,7.5 L18,10.5 L10.5,10.5 L10.5,18 L7.5,18 L7.5,10.5 L0,10.5 L0,7.5 L7.5,7.5 L7.5,0 L10.5,0 L10.5,7.5 Z"></path>
+        </g>
+    </g>
+</svg>

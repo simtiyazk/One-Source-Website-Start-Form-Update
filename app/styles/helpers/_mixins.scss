@@ -1,0 +1,258 @@
+//
+// Mixins
+// --------------------------------------------------
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs: 480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min: $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone: $screen-xs-min !default;
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm: 768px !default;
+$screen-sm-min: $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet: $screen-sm-min !default;
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md: 992px !default;
+$screen-ipad11-tablet: 834px !default;
+$screen-ipad11-md-tablet: 1112px !default;
+$screen-md-tablet: 1024px !default;
+$screen-xl-tablet: 1366px !default;
+$screen-md-min: $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop: $screen-md-min !default;
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg: 1200px !default;
+$screen-lg-min: $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop: $screen-lg-min !default;
+
+$screen-xlg: 1400px !default;
+$screen-xlg-min: $screen-xlg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-xlg-desktop: $screen-xlg-min !default;
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+@mixin breakpoint($points) {
+  @each $point in $points {
+    @if $point == xlarge {
+      @media screen and (min-width: $screen-xlg-min) {
+        @content;
+      }
+    } @else if $point == large {
+      @media screen and (min-width: $screen-lg-min) {
+        @content;
+      }
+    } @else if $point == desktop {
+      @media screen and (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
+        @content;
+      }
+    } @else if $point == desktop-down {
+      @media screen and (max-width: $screen-md-max) {
+        @content;
+      }
+    } @else if $point == tablet-up {
+      @media screen and (min-width: $screen-md-min) {
+        @content;
+      }
+    } @else if $point == tablet {
+      @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        @content;
+      }
+    } @else if $point == tablet-down {
+      @media screen and (max-width: $screen-sm-max) {
+        @content;
+      }
+    } @else if $point == tablet-portrait-down {
+      @media screen and (max-width: $screen-xs-max) {
+        @content;
+      }
+      @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation: portrait) {
+        @content;
+      }
+    } @else if $point == tablet-landscape-up {
+      @media screen and (min-width: $screen-md-min) {
+        @content;
+      }
+      @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation: landscape) {
+        @content;
+      }
+    } @else if $point == tablet-portrait {
+      @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation: portrait) {
+        @content;
+      }
+    } @else if $point == tablet-landscape {
+      @media screen and (min-width: $screen-sm-min) and (max-width: $screen-md-tablet) and (orientation: landscape) {
+        @content;
+      }
+    } @else if $point == tablet-ipadpro12 {
+      @media screen and (min-device-width: $screen-md-tablet) and (max-device-width: $screen-xl-tablet) and (-webkit-min-device-pixel-ratio: 2) {
+        @content;
+      }
+    } @else if $point == tablet-ipadpro12-portrait {
+      @media screen and (min-width: 1023px) and (max-width: $screen-md-tablet)  and (orientation: portrait)  and (-webkit-min-device-pixel-ratio: 2) {
+        @content;
+      }
+    } @else if $point == tablet-ipadpro12-landscape {
+      @media screen and (min-width: 1365px) and (max-width: $screen-xl-tablet)  and (orientation: landscape)  and (-webkit-min-device-pixel-ratio: 2) {
+        @content;
+      }
+    } @else if $point == tablet-ipadpro11 {
+      @media screen and (min-device-width: $screen-ipad11-tablet) and (max-device-width: $screen-ipad11-md-tablet) and (-webkit-min-device-pixel-ratio: 2) {
+        @content;
+      }
+    } @else if $point == tablet-ipadpro11-portrait {
+      @media screen and (min-device-width: $screen-ipad11-tablet) and (max-device-width: $screen-ipad11-tablet) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+        @content;
+      }
+    } @else if $point == tablet-ipadpro11-landscape {
+      @media screen and (min-device-width: $screen-ipad11-md-tablet) and (max-device-width: $screen-ipad11-md-tablet) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+        @content;
+      }
+    } @else if $point == tablet-ipadpro11-landscape-custom {
+      @media screen and (min-width: 1111px) and (max-width: $screen-ipad11-md-tablet) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+        @content;
+      }
+    } @else if $point == phone-up {
+      @media screen and (min-width: $screen-sm-min) {
+        @content;
+      }
+    } @else if $point == phone {
+      @media screen and (max-width: $screen-xs-max) {
+        @content;
+      }
+    } @else if $point == iphone8 {
+      @media screen and (max-width: 375px) {
+        @content;
+      }
+    } @else if $point == phone-portrait {
+      @media screen and (max-width: $screen-xs-max) and (orientation: portrait) {
+        @content;
+      }
+    } @else if $point == phone-landscape {
+      @media screen and (max-width: $screen-xs-max) and (orientation: landscape) {
+        @content;
+      }
+    } @else if $point == desktop-custom {
+      @media screen and (min-width: $screen-md) and (max-width: 1023px) and (min-height: 615px) and (max-height: 767px) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin alignment($align: center, $position: absolute) {
+  position: $position;
+  @if $align == vertical {
+    top: 50%;
+    transform: translateY(-50%);
+  } @else if $align == horizontal {
+    left: 50%;
+    transform: translateX(-50%);
+  } @else if $align == center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin font-face($font-family, $font-name, $font-weight: 500, $font-style: normal, $font-url: '../fonts') {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('#{$font-url}/#{$font-name}.woff2') format('woff2'),
+    url('#{$font-url}/#{$font-name}.woff') format('woff'),
+    url('#{$font-url}/#{$font-name}.ttf') format('truetype'),
+    url('#{$font-url}/#{$font-family}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+// sass-lint:disable-all
+@mixin transition($args...) {
+  -moz-transition: $args;
+  -webkit-transition: $args;
+  -o-transition: $args;
+  -ms-transition: $args;
+  transition: $args;
+}
+
+@mixin rotate($angle) {
+  -moz-transform: rotate($angle);
+  -ms-transform: rotate($angle);
+  transform: rotate($angle);
+  -webkit-transform: rotate($angle);
+}
+
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+// sass-lint:enable-all
+
+@mixin input-placeholder($fontFamily, $normalColor, $errorColor, $fontSize) {
+  // sass-lint:disable-all
+  :-ms-input-placeholder {
+    color: $normalColor;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    opacity: 1;
+    text-transform: none;
+  }
+  ::-webkit-input-placeholder {
+    color: $normalColor; //font-family: $OpenSansItalic;
+    font-size: $fontSize;
+    opacity: 1;
+    text-transform: none;
+  }
+  ::-moz-placeholder {
+    color: $normalColor;
+    font-size: $fontSize;
+    opacity: 1;
+    font-family: $fontFamily;
+    text-transform: none;
+  }
+  .error {
+    color: $errorColor !important;
+    font-family: $fontFamily;
+  }
+  .error:-ms-input-placeholder {
+    color: $errorColor;
+    font-family: $fontFamily;
+  }
+  .error::-webkit-input-placeholder {
+    color: $errorColor;
+    font-family: $fontFamily;
+  }
+  .error::-moz-placeholder {
+    color: $errorColor;
+    font-family: $fontFamily;
+  }
+  // sass-lint:enable-all
+}
+
+@mixin display-flex( $direction: initial, $justify: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+@mixin ie-only() {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}

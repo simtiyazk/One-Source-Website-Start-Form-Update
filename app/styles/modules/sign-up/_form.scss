@@ -1,0 +1,310 @@
+.#{$prefix}-m-sign-up-form {
+
+  .width-form {
+    max-width: 540px;
+    margin: auto;
+  }
+  .descrp {
+    font-size: 20px;
+    margin: 20px auto 35px auto;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #4e4e4e;
+  }
+  p {
+    &.mt-custom {
+      margin-top: 60px;
+    }
+    &.head {
+      font-size: 12px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2.33;
+      letter-spacing: 0px;
+      color: #555555;
+      span {
+        color: #ac182e;
+      }
+    }
+    &.rad-head {
+      margin-top: 40px;
+      font-size: 20px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.4;
+      letter-spacing: normal;
+      color: #4e4e4e;
+    }
+  }
+  .form__group {
+    position: relative;
+    margin-bottom: 26px;
+  }
+
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border-radius: 3px;
+    border: solid 1px #bbbabc;
+    background-color: #ffffff;
+    outline: 0;
+    padding: 12px 10px 1px 9px;
+    font-size: 20px;
+    color: #555555;
+    font-weight: 400;
+    background: transparent;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:placeholder-shown ~ .form__label {
+      font-size: 20px;
+      cursor: text;
+    }
+  }
+
+  .form__label {
+    position: absolute;
+    top: -6px;
+    margin-bottom: 0;
+    display: block;
+    padding: 11px 10px;
+    transition: 0.2s;
+    font-size: 10px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 300;
+    color: #555555;
+    span {
+      color: #ac182e;
+    }
+  }
+
+  .form__field:focus {
+    ~ .form__label {
+      position: absolute;
+      top: -6px;
+      display: block;
+      transition: 0.2s;
+      font-size: 10px;
+      font-weight: 500;
+      color: #555555;
+    }
+  }
+
+    /* The container */
+  .chkbox-ar, .rad-ar {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    font-size: 19px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #4e4e4e;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default checkbox */
+  .chkbox-ar input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: solid 1px #bbbabc;
+    background-color: transparent;
+    border-radius: 3px;
+  }
+
+  /* On mouse-over, add a grey background color */
+  @media (hover: hover) and (pointer: fine) {
+  .chkbox-ar:hover input ~ .checkmark {
+    background-color:#2EC2F0;
+    border: solid 1px #2EC2F0;
+
+    // background: url('../images/home/active.svg') no-repeat;
+    // background-size: contain;
+    // position: absolute;
+    // left: 0px;
+    // top: 0px;
+    // width: 25px;
+    // height: 25px;
+    // border: solid 0px transparent;
+  }
+  }
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    display: none;
+    
+  }
+
+  /* Show the checkmark when checked */
+  .chkbox-ar input:checked ~ .checkmark:after {
+    display: block;
+    content: url('../images/home/active.svg');
+    //background: url('../images/home/active.svg') no-repeat;
+    position: absolute;
+    background-size: contain;
+    left: -2px;
+    top: -2px;
+    width: 25px;
+    height: 25px;
+    border: solid 0px transparent;
+  }
+
+
+  .rad-ar input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Create a custom radio button */
+  .checkmark-rad {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: solid 1px #bbbabc;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .rad-ar:hover input ~ .checkmark-rad {
+    background-color: #2EC2F0;
+    border: solid 1px #2EC2F0;
+  }
+
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark-rad:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .rad-ar input:checked ~ .checkmark-rad:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .rad-ar .checkmark-rad:after {
+    content: url('../images/home/filled.svg');
+    left: -1px;
+    top: -1px;
+    width: 1px;
+    height: 1px;
+  }
+
+  .submit-btn {
+    width: 311px;
+    height: 40px;
+    margin: auto;
+    padding: 8px 31px;
+    border-radius: 20px;
+    border: solid 1px #2ec2f0;
+    background-color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.7;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #2ec2f0;
+    display: none;
+
+    &:hover, &:active {
+      background: #2ec2f0;
+      opacity: 1;
+      color: #ffffff;
+    }
+  }
+  .form-submit {
+    margin: 48px auto 30px auto;
+    text-align: center;
+  }
+
+
+  .form-block {
+
+    .temp-op{
+      opacity: 0;
+    }
+    
+    .hcp,.patient {
+      display: none;
+    }
+
+    .hcp, .patient {
+      animation: fadeInUp; 
+      animation-duration: 0.5s;
+    }
+
+    input {
+      .form__label {
+        font-weight: 500;
+      }
+      & ~ label.error {
+        color: $error;
+        font-size: 10px;
+        line-height: 14px;
+        padding-top: 4px;
+        font-style: italic;
+        &::before {
+          content: url('../images/error/warning.png');
+          width: 6px;
+          height: 6px;
+          position: relative;
+          padding-right: 8px;
+        }
+      }
+
+      &.error {
+        border: solid 1px $error !important;
+        & ~ label.form-radio-label .big {
+          border: solid 1px $error !important;
+        }
+        & ~ label.form-check-label::before{
+          border: solid 1px $error !important;
+        }
+      }
+    }
+  }
+
+  .disabl {
+    pointer-events: none;
+    background-color: #ddd;
+  }
+
+  @include breakpoint('tablet-up') {
+    max-width: 725px;
+    margin: 10px auto 30px auto;
+  }
+}

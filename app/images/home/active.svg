@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>ic_checkmark_box/active</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ic_checkmark_box/active" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M3.28427125,0.5 C1.90355937,0.5 0.784271247,1.61928813 0.784271247,3 L0.784271247,23 C0.784271247,24.3807119 1.90355937,25.5 3.28427125,25.5 L23.2842712,25.5 C24.6649831,25.5 25.7842712,24.3807119 25.7842712,23 L25.7842712,3 C25.7842712,1.61928813 24.6649831,0.5 23.2842712,0.5 L3.28427125,0.5 Z" id="datafield/default" stroke="#2EC2F0" fill="#FFFFFF"></path>
+        <path d="M14.5,11.5 L22,11.5 L22,14.5 L14.5,14.5 L14.5,22 L11.5,22 L11.5,14.5 L4,14.5 L4,11.5 L11.5,11.5 L11.5,4 L14.5,4 L14.5,11.5 Z" id="ic_isi_open/close" fill="#2EC2F0" transform="translate(13.000000, 13.000000) rotate(45.000000) translate(-13.000000, -13.000000) "></path>
+    </g>
+</svg>

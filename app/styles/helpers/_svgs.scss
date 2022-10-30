@@ -1,0 +1,22 @@
+.svg-icon {
+  pointer-events: none;
+  vertical-align: middle;
+}
+
+// sass-lint:disable-all
+#icon-search {
+  g {
+    &:first-child {
+      path {
+        fill: rgba($color-turquoise, .17);
+      }
+    }
+
+    &:last-child {
+      path {
+        fill: $color-turquoise;
+      }
+    }
+  }
+}
+// sass-lint:enable-all

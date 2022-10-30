@@ -1,0 +1,200 @@
+.#{$prefix}-m-sign-up-animated-hero {
+  width: 100vw;
+  height: 41rem;
+  background-color: $blue-cadet;
+  position: relative;
+
+  @keyframes slideInFromRight {
+    0% {
+      transform: translate(50%, -50%);
+      opacity: 1;
+    }
+    15%{
+      transform: 1;
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translate(-50%, 50%);
+      opacity: 1;
+    }
+    15%{
+      transform: 1;
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  .child-hand,
+  .adult-hand {
+    position: absolute;
+    background-repeat: no-repeat  ;
+    display: block;
+  }
+
+  .child-hand {
+    bottom: -2rem;
+    left: 0;
+    width: 19.6rem;
+    height: 32.6rem;
+    background-image: url('/images/sign-up/mobile-hand-kid.png');
+    background-size: 135%;
+    background-position-x: -4rem;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+
+  .adult-hand {
+    top: -4rem;
+    right: 0;
+    width: 20.3rem;
+    height: 36.3rem;
+    background-image: url('/images/sign-up/mobile-hand-adult.png');
+    background-size: 110%;
+    animation: 1s ease-out 0s 1 slideInFromRight;
+  }
+  * {
+    text-align: center;
+  }
+
+  .text-content {
+    width: 86vw;
+    margin: 0 7vw;
+    padding-top: 6.5rem;
+    h1,
+    .eyebrow {
+      position: relative;
+      z-index: 2;
+    }
+    h1 {
+      color: $color-white;
+      line-height: 3rem;
+      margin-top: 1rem;
+    }
+    .eyebrow {
+      margin-bottom: 0;
+      line-height: normal;
+      color: $white-navajo;
+      display: inline-block;
+      width: 70%;
+    }
+  }
+  .scroll-down,
+  .scroll-down:visited,
+  .scroll-down:hover{
+    @include sans-extra-bold;
+    color: $color-white;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    position: absolute;
+    bottom: 2.4rem;
+    margin: 0 auto;
+    display: block;
+    left: 0;
+    right: 0;
+    width: max-content;
+    text-decoration: none;
+    outline: 0;
+    .dot{
+      height: 2px;
+      width: 2px;
+      background-color: $color-white;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+      bottom: -1.5rem;
+      right: 50%;
+      &::before {
+        content: '';
+        height: 2px;
+        width: 2px;
+        background-color: $color-white;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -.7rem;
+      }
+
+      &::after {
+        content: '';
+        height: 2px;
+        width: 2px;
+        background-color: $color-white;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: .7rem;
+      }
+    }
+  }
+
+  @include breakpoint('phone-up') {
+    height: 50.2rem;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    .child-hand {
+      bottom: -7rem;
+      left: 0;
+      width: 40.5rem;
+      height: 40.5rem;
+      background-image: url('/images/sign-up/type1test-kid-hand.png');
+      background-size: 181%;
+      background-position: 100% 59%;
+    }
+    .adult-hand {
+      top: 0;
+      right: 0;
+      width: 40.9rem;
+      height: 56.5rem;
+      background-image: url('/images/sign-up/type1test-adult-hand.png');
+      background-size: 150%;
+      background-position: 0% 100%;
+    }
+    .text-content{
+      padding: 8rem 0 0 0;
+      width: 56rem;
+      .eyebrow {
+        line-height: 4rem;
+        display: inline;
+      }
+      h1{
+        font-size: 5rem;
+        line-height: 5.5rem;
+        margin-top: 0;
+      }
+    }
+  }
+
+  @include breakpoint('tablet-up') {
+
+    .child-hand {
+      bottom: -4rem;
+      left: 0;
+      width: 59.5rem;
+      height: 55.5rem;
+      background-image: url('/images/sign-up/type1test-kid-hand.png');
+      background-size: 181%;
+      background-position: 100% 59%;
+    }
+    .adult-hand {
+      top: 0%;
+      right: 0%;
+      width: 54.9rem;
+      height: 64.5rem;
+      background-image: url('/images/sign-up/type1test-adult-hand.png');
+      background-size: 150%;
+      background-position: 0% 100%;
+    }
+    .scroll-down{
+      display: none;
+    }
+  }
+}

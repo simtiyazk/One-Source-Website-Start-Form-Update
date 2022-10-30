@@ -1,0 +1,108 @@
+.#{$prefix}-pre-form {
+  margin: 50px auto 10px auto;
+  max-width: 700px;
+  text-align: center;
+
+  @include breakpoint('phone'){
+    margin: 30px auto 10px auto;
+  }
+  h1 {
+    font-size: 35px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4e4e4e;
+  }
+
+  .download-ar{
+    margin: 18px 0 5px 0;
+    p {
+      font-size: 20px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.4;
+      letter-spacing: normal;
+      text-align: center;
+      color: #4e4e4e;
+
+      a {
+        color: #2ec2f0;
+        text-decoration: underline;
+      }
+
+      sup {
+        top: -0.4rem;
+        font-size: 65%;
+      }
+    }
+
+    .decorated{
+      overflow: hidden;
+      text-align: center;
+      color: #2ec2f0;
+
+      &>span {
+        position: relative;
+        display: inline-block;
+
+        &::before, &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          border-bottom: 1px solid #2ec2f0;
+          width: 16vw;
+          margin: 0 13px;
+        }
+
+        &::after {
+          left: 100%;
+        }
+        &::before {
+          right: 100%;
+        }
+      }
+    }
+  }
+  .btn-sect {
+    .btns {
+      @include helvetica-67-md-cn;
+      color: #2EC2F0;
+      display: inline-block;
+      padding-top: 17px;
+      width: 302px;
+      background-size: contain;
+      height: 63px;
+      font-size: 20px;
+      margin: 30px 30px 0 0;
+      border-radius: 40px;
+      background-repeat: no-repeat;
+      background-image: url('../images/home/button.png');
+      &.btn-hcp {
+        background-image: url('../images/home/buttonhcp.png');
+      }
+      &:hover {
+          background-color: #2ec2f0;
+          color: white;
+          transition: all 0.5s;
+        }
+    }
+  }
+
+  .actv {
+    background-color: #2ec2f0;
+    color: #fff !important;
+    transform: scale(1.25);
+    transition: all 0.5s;
+    @include breakpoint('phone') {
+      transform: scale(1.09);
+    }
+  }
+  .inactv {
+    transform: scale(0.75);
+    transition: all 0.5s;
+  }
+}

@@ -1,0 +1,19 @@
+{{#extend "layout" page="home"
+    title="One Source Start Form Page"
+    description="One Source Start Form Page"
+    }}
+  {{#content "body" }}
+
+<div class="container-fluid o-hidden">
+  {{> sign-up/preform }}
+  <div class="row">
+    <div class="col-12 px-0 mx-0">
+      {{> sign-up/form data=pages.signUp.form }}
+    </div>
+  </div>
+</div>
+
+
+<!-- End of event snippet: Please do not remove -->
+{{/content}}
+{{/extend}}

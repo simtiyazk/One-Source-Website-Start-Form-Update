@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+  {{#block "head"}}
+    {{> global/head }}
+  {{/block}}
+
+  <body class="{{ global.prefix }}-p {{ page }}-page" >
+    {{#if global.gtm.enabled }}
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ global.gtm.id }}"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    {{/if}}
+
+    {{#block "svgs"}}
+      {{> global/svgs }}
+    {{/block}}
+
+    {{> global/topbanner}}
+    
+    <div class="{{ global.prefix }}-header container-fluid">
+      {{> global/nav data=global.nav}}
+    </div>
+    <div class="container-fluid">
+      <main role="main" class="">
+        {{#block "body"}}
+            <h2>this is the {{ page }} page</h2>
+        {{/block}}
+      </main>
+    </div>
+
+    {{> global/footer}}
+
+    {{#block "scripts"}}
+      {{> global/scripts }}
+    {{/block}}
+    
+  </body>
+</html>

@@ -1,0 +1,42 @@
+{{!-- <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          logo
+          <ul class="{{ global.prefix }}-m-footer-h-list">
+          {{#each global.footer.nav as |item i|}}
+              <li class="item"><a class="link exclude-link" target="{{item.target}}" href="{{item.link}}" {{{this.dataCategory}}} {{{this.dataEvent}}} {{{this.EventLabel}}} >{{item.name}}</a>
+              </li>
+          {{/each}}
+        </ul>
+          <p>Some text</p>
+        </div>
+      </div>
+    </div>
+  </footer> --}}
+<footer id="colophon" class="{{ global.prefix }}-footer site-footer">
+  <div class="container-fluid ">
+    <div class="footer-wrapper clearfix">
+      <section id="text-2" class="col-xs-12 widget widget_text">
+        <div class="textwidget">
+          <p>
+            <a href="http://alexion.com/" target="_blank">
+            <img alt="{{global.footerlogo.alttext}}" class="" src="{{global.footerlogo.img}}" width="291">
+            </a>
+            </p>
+          <ul class="">
+            {{#each global.footer.nav as |item i|}}
+                <li class="item"><a class="link" target="{{item.target}}" href="{{item.link}}" >{{item.name}}</a>
+                </li>
+            {{/each}}
+          </ul>
+          <p>
+          <span class="s1">
+            ALEXION, the Alexion logo, and the OneSource logo are registered trademarks of Alexion Pharmaceuticals, Inc., and OneSource™ is a trademark of Alexion Pharmaceuticals, Inc.<br>&copy;2021, Alexion Pharmaceuticals, Inc. All rights reserved. US/SOL-g/0360 03/21
+           </span>
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,40 @@
+<div class="{{ global.prefix }}-m-sign-up-slider">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-content">
+        <p class="eyebrow">{{data.title }}</p>
+        <p class="h2">{{data.mainText}}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="slider-carousel {{#compare data.items.length 3 operator="<="}}small-slider{{/compare}}">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              {{#each data.items}}
+                <div class="carousel-slide-content swiper-slide ">
+                    <div class="top" style="background-image: url('{{bgImage}}'); background-size: cover; background-repeat: no-repeat;">
+                      <a href="{{link.url}}" target="{{link.target}}" {{{link.dataCategory}}} {{{link.dataEvent}}} {{{link.EventLabel}}}><img src="{{logo.src}}" alt="{{logo.alt}}" /></a>
+                    </div>
+                    <div class="bottom">
+                      <p class="text {{type}}">{{mainText}}</p>
+                      <a class="link" href="{{link.url}}" target="{{link.target}}" {{{link.dataCategory}}} {{{link.dataEvent}}} {{{link.EventLabel}}}>{{link.text}}</a>
+                    </div>
+                </div>
+              {{/each}}
+            </div>
+            {{#compare data.items.length 3 operator=">"}}
+            <!-- next / prev arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- !next / prev arrows -->
+            {{/compare}}
+            <!-- pagination dots -->
+            <div class="swiper-pagination"></div>
+            <!-- !pagination dots -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

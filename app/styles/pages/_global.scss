@@ -1,0 +1,36 @@
+* {
+  // sass-lint:disable-all
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // sass-lint:enable-all
+}
+
+body {
+  background:  none;
+}
+
+html {
+  // A font-size of 62.5% will create a base font-size of 10px in most cases
+  height: 100%;
+  font-size: 62.5%;
+}
+
+.top-banner{
+  background: #ffa301;
+  padding: 19px;
+  text-align: center;
+  margin: 0px 0px 20px;
+  a {
+    font-size: 18px;
+    color: rgb(0, 48, 108);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+sup {
+  top: -0.4rem;
+  font-size: 65%;
+}
+.o-hidden{
+  overflow: hidden !important;
+}

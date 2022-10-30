@@ -1,0 +1,90 @@
+//
+// Global variables
+// --------------------------------------------------
+$prefix: 'tep';
+
+// Fonts
+//Helvetica-67-Md-Cn
+$f-helvetica-67-md-cn: 'Helvetica-Neue-LT-W05_67-Md-Cn';
+
+// Helvetica-47-Lt-Cn
+$f-helvetica-47-lt-cn: 'Helvetica-Neue-LT-W05_47-Lt-Cn';
+
+// Helvetica-47-Lt-Cn-Ob
+$f-helvetica-47-lt-cn-ob: 'Helvetica-Neue-LT-W05_47-Lt-Cn-Ob';
+
+
+$browser-context: 18;
+
+// Colors
+// Please use http://chir.ag/projects/name-that-color/#6195ED as reference for the colors name
+$color-black: #000;
+$color-black-16: rgba(0, 0, 0, .16);
+$color-gray: #666;
+$color-lightgray: #c2c2c2;
+$color-red: #f15d5d;
+$color-turquoise: #009db9;
+$color-turquoise-links: #0090aa;
+$color-white: #fff;
+$color-light-blue: #d9f0f5;
+$color-light-gray: #e8e8e8;
+$color-blue: #99d8e3;
+$color-light-red: #fde7e7;
+$color-med-red: #f9bebe;
+$color-med-gray: #c2c2c2;
+$color-deepcerulean: #007ba7;
+$color-riverbed: #434c59;
+$color-boulder: #7c7c7c;
+// Colors for TEP_Unbranded_Site
+$color-darkgrey: #5b5b5b;
+$white-navajo: #ffe1ad;
+$soft-black: #494949;
+$gold-yellow: #fbb852;
+$sea-green-200: #a5d9d1;
+$sea-green-100: rgba(175, 226, 214, .5);
+$pale-yellow: #ffe9c4;
+$dark-pale-yellow: #ffe1ad;
+$rust: #f8a587;
+$cerulean: #1289c3;
+$blue-tip: #3178c9;
+$blue-cadet: #9dacbe;
+$grey: #97a6b6;
+$grey-alto: #d2d2d2;
+$grey-alto2: #d8d8d8;
+$grey-gallery: #eeeeee;
+$grey-alabaster: #f8f8f8;
+$grey-scorpion: #575757;
+$green-grey: #869491;
+$dark-green: #113133;
+$green-pea: #154c30;
+$error: #ac182e;
+$slate-blue: #577a94;
+$cream: #f7f6f4;
+$btn-green: #afe2d6;
+$nav-text: #1f203c;
+$anzac: #e1ac51;
+$koromiko: #FEBE61;
+$dove-gray: #707070;
+$pickled-bluewood: #2c3e50;
+$gunsmoke: #869592;
+$navbg: rgba(94, 94, 94, .54);
+$apricot: #ea8f6d;
+$apple-green: #e1f3f0;
+$sinbad: #a5d9d1;
+$dark-text-grey: #252829;
+$mariner: #3178C9;
+$scorpion: #5b5b5b;
+$black-shadow: rgba(0, 0, 0, .06);
+$white-transparent: rgba(255,255,255,.8);
+$dark-gray: #a4a4a4;
+$beryl-green: #B6B7AB;
+$dark-grayish-blue: #485462;
+$cornflower-blue: #0f3133;
+
+  // modal styles
+$modal-dialog-margin: 10px;
+$modal-content-border-width: 1px;
+$modal-content-border-color: #f15d5d;
+$modal-inner-padding: 0 25px 20px;
+$zindex-modal: 1050;
+$zindex-modal-bg: 1000;
